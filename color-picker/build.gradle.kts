@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt.android)
 }
 
@@ -31,7 +32,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
