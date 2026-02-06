@@ -36,17 +36,9 @@ fun ColorPicker(
 ) {
     when (layout) {
         is PickerLayout.Horizontal -> {
-            if (colors.size <= 10)
                 HorizontalSlider(
                     colors = colors,
                     onColorClick = { color, index ->
-                        onColorSelected(color , index)
-                    }
-                )
-            else
-                LazyHorizontalSlider(
-                    colors = colors,
-                    onColorClick = { color , index ->
                         onColorSelected(color , index)
                     }
                 )
@@ -59,13 +51,13 @@ fun ColorPicker(
 }
 
 @Composable
-fun LazyHorizontalSlider(colors: List<Color>, onColorClick: (Color, Int) -> Unit) {
-    TODO(reason = "Not yet implemented")
-}
-
-@Composable
 fun HorizontalSlider(colors : List<Color>, onColorClick: (Color, Int) -> Unit ) {
-    TODO(reason = "Not yet implemented")
+    if (colors.size <= 10) {
+
+    }
+    else {
+
+    }
 }
 
 
